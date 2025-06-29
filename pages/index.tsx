@@ -14,9 +14,9 @@ export default function Home() {
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>DevHub | Sites, Sistemas e Impressão em Sobral</title>
+        <title>DevHub | Sites, Sistemas e Móveis Planejados em Sobral</title>
         <meta name="description" content="Desenvolvemos sites profissionais, sistemas sob medida, design gráfico e impressão. Atendemos Sobral e toda a região com soluções digitais completas." />
-        <meta name="keywords" content="DevHub, sites em Sobral, sistemas web, design gráfico, impressão, desenvolvimento web, software personalizado" />
+        <meta name="keywords" content="DevHub, sites em Sobral, sistemas web, moveis planejados, design gráfico, impressão, desenvolvimento web, software personalizado" />
         <meta name="author" content="DevHub" />
         <link rel="canonical" href="https://devhub-lake.netlify.app/" />
         <link rel="icon" href="/assets/favicon.ico" />

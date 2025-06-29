@@ -34,8 +34,7 @@ export default function Home() {
         <meta name="twitter:description" content="Sites, sistemas e design com qualidade profissional." />
         <meta name="twitter:image" content="https://devhub-lake.netlify.app/assets/logo.png" />
 
-        {/* Google Search Console (caso tenha verificação) */}
-        {/* <meta name="google-site-verification" content="SEU_CODIGO_AQUI" /> */}
+    
       </Head>
 
       <Header />

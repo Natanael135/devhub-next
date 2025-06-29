@@ -1,0 +1,234 @@
+.hero {
+  display: block;
+  padding: 2rem 2rem;
+  color: #fff;
+}
+
+.text {
+  animation: fade-slide-up 1s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+
+.text h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-wrap-style: pretty;
+}
+
+/* Aplica apenas no texto principal */
+.text h2 span:not(.dot) {
+  color: var(--primary);
+  display: inline-block;
+  animation: pulseFade 1.5s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.7s;
+}
+
+.dot {
+  font-weight: bold;
+  font-size: 2.5rem;
+  display: inline-block;
+  width: 1ch;
+  color: var(--primary);
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulseFade {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.tech {
+  display: inline-block;
+  position: relative;
+}
+
+.dot {
+  display: inline-block;
+  width: 1ch;
+  color: var(--primary);
+  animation: blink 1s steps(2, start) infinite;
+}
+
+.text p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.services {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+.services li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-self: center;
+}
+
+.buttons a {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #2985c8;
+  color: white;
+  cursor: pointer;
+  animation: float 4s ease-in-out infinite;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.buttons a:hover {
+  background-color: #0056b3;
+}
+
+.secondary {
+  background-color: #444;
+}
+
+.secondary:hover {
+  background-color: #222;
+}
+
+.image {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.text {
+  animation: fadeSlideUp 1s ease-out forwards;
+  opacity: 0;
+  /* garante que começa invisível até a animação acontecer */
+  animation-delay: 0.3s;
+}
+
+.image {
+  animation: fadeSlideRight 1.2s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+
+/* 🌐 Estilos para telas maiores (desktop) */
+@media (min-width: 768px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 10rem;
+    gap: 1rem;
+  }
+
+  .text h1 {
+    font-size: 3rem;
+  }
+
+  .text p {
+    font-size: 1.2rem;
+    max-width: 600px;
+  }
+
+  .services li {
+    font-size: 1.1rem;
+  }
+
+  .buttons {
+    flex-direction: row;
+    justify-content: flex-start;
+    justify-self: flex-start;
+  }
+
+  .image {
+    display: flex;
+    width: 700px;
+    height: 500px;
+    background-image: url("/assets/programador2.jpg");
+    background-size: cover;
+    background-position: center;
+
+    /* Máscara com transparência real nos 20% da direita */
+    -webkit-mask-image: linear-gradient(to right,
+        transparent 0%,
+        white 50%,
+        white 10%);
+    mask-image: linear-gradient(to right, transparent 0%, white 20%, white 40%);
+  }
+}

@@ -21,11 +21,9 @@
 }
 
 .title {
-  color: white;
+  color: var(--primary);
   font-size: 2rem;
   text-decoration: none;
-  text-decoration: none; 
-  color: inherit;
 }
 
 .link {
